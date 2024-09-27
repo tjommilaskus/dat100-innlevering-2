@@ -1,10 +1,12 @@
 package no.hvl.dat100.tabeller;
 
+import java.util.Arrays;
+
 public class Tabeller {
 
 	// a)
 	public static void skrivUt(int[] tabell) {
-		
+
 		System.out.print("[");
 		for (int i = 0; i < tabell.length; i++) {
 			System.out.print(tabell[i] + " ");
@@ -15,24 +17,31 @@ public class Tabeller {
 
 	// b)
 	public static String tilStreng(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+		System.out.println(Arrays.toString(tabell).replace(" ", ""));
+		return Arrays.toString(tabell).replace(" ", "");
 	}
 
 	// c)
 	public static int summer(int[] tabell) {
+		int sum = 0;
+		for (int s : tabell) {
+			sum += s;
+		}
+		return sum;
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden summer ikke implementert");
 	}
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
-
+		boolean finnes = false;
+		for (int t : tabell) {
+			if (t == tall) {
+				finnes = true;
+			}
+			
+		}
+		return finnes;
 	}
 
 	// e)
